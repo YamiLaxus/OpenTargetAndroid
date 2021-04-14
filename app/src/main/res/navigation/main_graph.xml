@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.phonedev.openstore.ui.home.main_fragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_phone_list"
+            app:destination="@id/fragment_phone_list"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_rigth"
+            app:popEnterAnim="@anim/slide_in_rigth"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_talbet_list"
+            app:destination="@id/fragment_talbet_list" />
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_acc_list"
+            app:destination="@id/fragment_acc_list" />
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_cup_list"
+            app:destination="@id/fragment_cup_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_phone_list"
+        android:name="com.phonedev.openstore.ui.home.fragment_phone_list"
+        android:label="fragment_phone_list"
+        tools:layout="@layout/fragment_phone_list" />
+    <fragment
+        android:id="@+id/fragment_talbet_list"
+        android:name="com.phonedev.openstore.ui.home.fragment_tablet_list"
+        android:label="fragment_talbet_list"
+        tools:layout="@layout/fragment_talbet_list" />
+    <fragment
+        android:id="@+id/fragment_acc_list"
+        android:name="com.phonedev.openstore.ui.home.fragment_acc_list"
+        android:label="fragment_acc_list"
+        tools:layout="@layout/fragment_acc_list" >
+        <action
+            android:id="@+id/action_fragment_acc_list_to_fragment_item_detail"
+            app:destination="@id/fragment_item_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_cup_list"
+        android:name="com.phonedev.openstore.ui.home.fragment_cup_list"
+        android:label="fragment_cup_list"
+        tools:layout="@layout/fragment_cup_list" />
+    <fragment
+        android:id="@+id/fragment_item_detail"
+        android:name="com.phonedev.openstore.ui.home.fragment_item_detail"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" />
+</navigation>
